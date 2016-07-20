@@ -13,9 +13,7 @@ class KanjisTableSeeder extends Seeder
     public function run()
     {
 
-        $file = base_path().'/database/csv/kanji.csv';
-
-        $csv = Reader::createFromPath($file);
+        $csv = Reader::createFromString(Storage::get('csv/kanji.csv'));
         $csv->each(function ($row) {
 
             if(empty($row)){

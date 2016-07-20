@@ -6,9 +6,9 @@ use App\Kanji;
 
 class PageController extends Controller
 {
-    public function jlpt($jlptLevel)
+    public function jlpt($level)
     {
-        $kanjis = Kanji::all();
-        return view("page.jlpt", compact('kanjis', 'jlptLevel'));
+        $kanjis = Kanji::where('jlpt-level', $level)->get();
+        return view("page.jlpt", compact('kanjis', 'level'));
     }
 }
