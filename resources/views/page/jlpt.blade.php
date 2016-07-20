@@ -6,7 +6,7 @@
 
 
 @section('content')
-    <section class="mdl-layout__tab-panel is-active" id="scroll-tab-1">
+    <section class="mdl-layout__tab-panel is-active" id="kanji">
         <div class="page-content">
             <div class="mdl-grid">
                 @foreach($kanjis as $kanji)
@@ -22,7 +22,7 @@
             </div>
         </div>
     </section>
-    <section class="mdl-layout__tab-panel" id="scroll-tab-2">
+    <section class="mdl-layout__tab-panel" id="vocabulary">
         <div class="page-content">
             <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
                 <thead>
@@ -42,7 +42,7 @@
             </table>
         </div>
     </section>
-    <section class="mdl-layout__tab-panel" id="scroll-tab-3">
+    <section class="mdl-layout__tab-panel" id="grammar">
         <div class="page-content">
             The Grammar is real
         </div>

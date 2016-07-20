@@ -4,15 +4,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <title>Kanji Resources</title>
-    <link rel="stylesheet" href="./bower_components/material-design-lite/material.min.css">
-    <script src="./bower_components/material-design-lite/material.min.js"></script>
+    <link rel="stylesheet" href="{{URL::asset('bower_components/material-design-lite/material.min.css')}}">
+    <script async src="{{URL::asset('bower_components/material-design-lite/material.min.js')}}"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
     <style>
-        .page-content {
-
-        }
-
         .kanji-card {
             height: auto;
             min-height: auto;
@@ -36,9 +32,9 @@
         </div>
         <!-- Tabs -->
         <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
-            <a href="#scroll-tab-1" class="mdl-layout__tab is-active">Kanji</a>
-            <a href="#scroll-tab-2" class="mdl-layout__tab">Vocabulary</a>
-            <a href="#scroll-tab-3" class="mdl-layout__tab">Grammar</a>
+            <a href="#kanji" class="mdl-layout__tab is-active">Kanji</a>
+            <a href="#vocabulary" class="mdl-layout__tab">Vocabulary</a>
+            <a href="#grammar" class="mdl-layout__tab">Grammar</a>
         </div>
     </header>
     <div class="mdl-layout__drawer">
@@ -54,6 +50,16 @@
     <main class="mdl-layout__content">
         @yield('content')
     </main>
+
+
+    <footer class="mdl-mini-footer">
+        <div class="mdl-mini-footer__left-section">
+            <div class="mdl-logo">&copy;2016 Severin Kaderli</div>
+            <ul class="mdl-mini-footer__link-list">
+                <li><a href="https://github.com/severinkaderli">GitHub</a></li>
+            </ul>
+        </div>
+    </footer>
 </div>
 </body>
 </html>
