@@ -20,15 +20,29 @@
         .kanji-card h2 {
             margin: 0 auto;
         }
+
     </style>
 </head>
 <body>
 <!-- Simple header with scrollable tabs. -->
-<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+
+
+<div class="mdl-layout mdl-layout--fixed-tabs mdl-layout--no-desktop-drawer-button mdl-js-layout mdl-layout--fixed-header">
+
     <header class="mdl-layout__header">
         <div class="mdl-layout__header-row">
             <!-- Title -->
             <span class="mdl-layout-title">JLPT Resources - @yield('jlpt-level')</span>
+
+            <div class="mdl-layout-spacer"></div>
+
+            <nav class="mdl-navigation mdl-layout--large-screen-only">
+                <a href="{{url('n5')}}" class="is-active mdl-navigation__link">JLPT N5</a>
+                <a href="{{url('n4')}}" class="mdl-navigation__link">JLPT N4</a>
+                <a href="{{url('n3')}}" class="mdl-navigation__link">JLPT N3</a>
+                <a href="{{url('n2')}}" class="mdl-navigation__link">JLPT N2</a>
+                <a href="{{url('n1')}}" class="mdl-navigation__link">JLPT N1</a>
+            </nav>
         </div>
         <!-- Tabs -->
         <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
